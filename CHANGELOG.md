@@ -19,3 +19,7 @@ Todas as alterações notáveis neste projeto serão documentadas neste arquivo.
 ## [1.0.2] - 2026-11-07
 ### Alterado
 - Ajustes no layout dos comentários de cada post
+-e 
+## [1.0.3] - 2026-11-07
+### Alterado
+- Ajustes no CSS do layout dos comentários de cada post
