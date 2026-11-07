@@ -7,7 +7,9 @@
 
 function base_box_scripts() {
 	// Enqueue main stylesheet.
-	wp_enqueue_style( 'base-box-style', BASE_BOX_URI . '/assets/css/main.css', array(), BASE_BOX_VERSION );
+	// wp_enqueue_style( 'base-box-style', BASE_BOX_URI . '/assets/css/main.css', array(), BASE_BOX_VERSION );
+	$time = time();
+	wp_enqueue_style( 'base-box-style', BASE_BOX_URI . '/assets/css/main.css', array(), $time );
 
 	// Enqueue navigation JS script with defer.
 	wp_enqueue_script( 'base-box-navigation', BASE_BOX_URI . '/assets/js/navigation.js', array(), BASE_BOX_VERSION, true );

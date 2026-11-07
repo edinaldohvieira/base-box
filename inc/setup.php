@@ -49,7 +49,8 @@ if ( ! function_exists( 'base_box_setup' ) ) :
 
 		// Add support for editor styles.
 		add_theme_support( 'editor-styles' );
-		add_editor_style( 'assets/css/main.css' );
+		$time = time();
+		add_editor_style( 'assets/css/main.css?vv='.$time );
 	}
 endif;
 add_action( 'after_setup_theme', 'base_box_setup' );
@@ -74,6 +75,19 @@ function base_box_widgets_init() {
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
+	) );
+	register_sidebar( array(
+	    'name'          => esc_html__( 'Footer Col 1 (Brand)', 'base-box' ),
+	    'id'            => 'footer-1',
+	    'before_widget' => '<div class="footer-widget">',
+	    'after_widget'  => '</div>',
+	) );
+
+	register_sidebar( array(
+	    'name'          => esc_html__( 'Footer Col 3 (Contato)', 'base-box' ),
+	    'id'            => 'footer-3',
+	    'before_widget' => '<div class="footer-widget">',
+	    'after_widget'  => '</div>',
 	) );
 }
 add_action( 'widgets_init', 'base_box_widgets_init' );

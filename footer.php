@@ -9,30 +9,33 @@
 </div><!-- #content -->
 
 <footer id="colophon" class="site-footer">
-	<div class="footer-container">
-		<div class="footer-branding">
-			<div class="site-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-			</div>
-			
-			<div class="site-info">
-				<?php $current_year = (int) date( 'Y' ); ?>
-				&copy; <?php echo esc_html( $current_year ); ?> <a href="<?php echo esc_url( home_url( '/' ) ); ?>"><?php bloginfo( 'name' ); ?></a>.
-			</div>
+	<div class="footer-container footer-grid">
+		
+		<div class="footer-col-1">
+			<?php if ( is_active_sidebar( 'footer-1' ) ) :
+				dynamic_sidebar( 'footer-1' );
+			else : ?>
+				<div class="site-title"><?php bloginfo( 'name' ); ?></div>
+				<p><?php bloginfo( 'description' ); ?></p>
+			<?php endif; ?>
 		</div>
 
-		<?php if ( has_nav_menu( 'footer' ) ) : ?>
-			<nav class="footer-navigation">
-				<?php
-				wp_nav_menu( array(
-					'theme_location' => 'footer',
-					'menu_class'     => 'footer-menu',
-					'container'      => false,
-					'depth'          => 1,
-				) );
-				?>
-			</nav>
-		<?php endif; ?>
+		<div class="footer-col-2">
+			<h3 class="footer-title"><?php esc_html_e( 'NAVEGAÇÃO', 'base-box' ); ?></h3>
+			<?php wp_nav_menu( array(
+				'theme_location' => 'footer',
+				'container'      => false,
+				'menu_class'     => 'footer-menu',
+			) ); ?>
+		</div>
+
+		<div class="footer-col-3">
+			<h3 class="footer-title"><?php esc_html_e( 'CONTATO', 'base-box' ); ?></h3>
+			<?php if ( is_active_sidebar( 'footer-3' ) ) :
+				dynamic_sidebar( 'footer-3' );
+			endif; ?>
+		</div>
+
 	</div>
 </footer>
 

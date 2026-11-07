@@ -11,3 +11,7 @@ Todas as alterações notáveis neste projeto serão documentadas neste arquivo.
 - Navegação acessível sem dependências JS externas.
 - Compatibilidade com WordPress Multisite (WPMU).
 - Otimização de SEO técnico e Core Web Vitals.
+-e 
+## [1.0.1] - 2026-11-07
+### Alterado
+- Troca do footer para um mais conveniente e moderno
