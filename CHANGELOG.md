@@ -23,3 +23,7 @@ Todas as alterações notáveis neste projeto serão documentadas neste arquivo.
 ## [1.0.3] - 2026-11-07
 ### Alterado
 - Ajustes no CSS do layout dos comentários de cada post
+-e 
+## [1.0.4] - 2026-11-07
+### Alterado
+- - Modificado o arquivo para diferenciar páginas singulares (`is_singular()`) de páginas de listagem (`/blog`, archives, categories, etc.).n   - Nas páginas de listagem, o tema agora renderiza apenas o resumo do post utilizando `the_excerpt()`.n   - Adicionado um botão elegante de chamada para ação ("Ler artigo completo →") para incentivar o engajamento e o clique.n   - Nas páginas individuais (`single.php`), o conteúdo completo (`the_content()`) continua sendo exibido normalmente.

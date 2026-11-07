@@ -12,7 +12,7 @@ if ( ! function_exists( 'base_box_post_meta' ) ) :
 	function base_box_post_meta() {
 		$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 		if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
-			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
+			$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s" style="display:none;">%4$s</time>';
 		}
 
 		$time_string = sprintf(
@@ -98,7 +98,7 @@ if ( ! function_exists( 'base_box_entry_footer' ) ) :
 				echo '<span class="cat-links">' . sprintf( esc_html__( 'Categorias: %1$s', 'base-box' ), $categories_list ) . '</span> '; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 			}
 
-			/* translators: used between list items, there is a space after the comma */
+			/* translators: `used between list items, there is a space after the comma */
 			$tags_list = get_the_tag_list( '', esc_html_x( ', ', 'list item separator', 'base-box' ) );
 			if ( $tags_list ) {
 				/* translators: 1: list of tags. */
