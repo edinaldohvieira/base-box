@@ -15,3 +15,7 @@ Todas as alterações notáveis neste projeto serão documentadas neste arquivo.
 ## [1.0.1] - 2026-11-07
 ### Alterado
 - Troca do footer para um mais conveniente e moderno
+-e 
+## [1.0.2] - 2026-11-07
+### Alterado
+- Ajustes no layout dos comentários de cada post
