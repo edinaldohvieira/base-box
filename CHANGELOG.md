@@ -26,4 +26,11 @@ Todas as alterações notáveis neste projeto serão documentadas neste arquivo.
 -e 
 ## [1.0.4] - 2026-11-07
 ### Alterado
-- - Modificado o arquivo para diferenciar páginas singulares (`is_singular()`) de páginas de listagem (`/blog`, archives, categories, etc.).n   - Nas páginas de listagem, o tema agora renderiza apenas o resumo do post utilizando `the_excerpt()`.n   - Adicionado um botão elegante de chamada para ação ("Ler artigo completo →") para incentivar o engajamento e o clique.n   - Nas páginas individuais (`single.php`), o conteúdo completo (`the_content()`) continua sendo exibido normalmente.
+- Modificado o arquivo para diferenciar páginas singulares (`is_singular()`) de páginas de listagem (`/blog`, archives, categories, etc.).
+- Nas páginas de listagem, o tema agora renderiza apenas o resumo do post utilizando `the_excerpt()`.
+- Adicionado um botão elegante de chamada para ação ("Ler artigo completo →") para incentivar o engajamento e o clique.
+- Nas páginas individuais (`single.php`), o conteúdo completo (`the_content()`) continua sendo exibido normalmente.
+-e 
+## [1.0.5] - 2026-11-07
+### Alterado
+- A listagem de posts na página /blog foi ajustada para exibir os artigos em um layout de duas colunas (ou coluna única em mobile) com a imagem destacada à esquerda e os dados/resumo à direita, seguindo o estilo profissional do projeto.

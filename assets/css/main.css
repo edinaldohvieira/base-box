@@ -336,15 +336,9 @@ blockquote {
 
 /* Grid layout for post archives */
 .posts-grid {
-	display: grid;
-	grid-template-columns: 1fr;
-	gap: 1.5rem;
-}
-
-@media (min-width: 640px) {
-	.posts-grid {
-		grid-template-columns: repeat(2, 1fr);
-	}
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
 }
 
 .card {
@@ -356,8 +350,47 @@ blockquote {
 	flex-direction: column;
 }
 
+/* Post List 2 Columns Layout (Image left, Content right) */
+.post-list-grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: 1.5rem;
+	align-items: center;
+}
+
+@media (min-width: 768px) {
+	.post-list-grid {
+		grid-template-columns: 320px 1fr;
+		gap: 2rem;
+	}
+}
+
+.post-list-thumb {
+	overflow: hidden;
+	border-radius: var(--radius);
+}
+
+.post-list-thumb img {
+	width: 100%;
+	height: auto;
+	aspect-ratio: 16 / 9;
+	object-fit: cover;
+	border-radius: var(--radius);
+	transition: transform var(--transition);
+}
+
+.post-list-thumb a:hover img {
+	transform: scale(1.03);
+}
+
+.post-list-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .card-title {
-	font-size: 1.25rem;
+	font-size: 1.35rem;
 	margin-bottom: 0.5rem;
 }
 
@@ -365,6 +398,7 @@ blockquote {
 	flex: 1;
 	color: var(--color-muted);
 	font-size: 0.95rem;
+	line-height: 1.5;
 }
 
 /* Sidebar */
